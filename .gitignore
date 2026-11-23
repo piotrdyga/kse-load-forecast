@@ -219,3 +219,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 data/
+
+# Prywatne notatki dla Claude (lokalne, poza gitem)
+CLAUDE.local.md
