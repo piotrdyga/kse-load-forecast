@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kse-forecast"
+version = "0.1.0"
+description = "Day-ahead hourly electricity demand forecasting for the Polish power system (KSE)."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+# Dependencies with pinned versions live in requirements.txt (single source of truth),
+# so that `pip install -r requirements.txt` gives a reproducible environment.
+dependencies = []
+
+[project.scripts]
+kse-forecast = "kse_forecast.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "W"]

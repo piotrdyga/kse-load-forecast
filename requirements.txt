@@ -1,8 +1,16 @@
+# Runtime
 requests==2.34.2
 pandas==3.1.0
 pyarrow==26.0.0
-matplotlib==3.11.2
-notebook==7.6.3
 holidays==0.107
 lightgbm==4.7.0
 scikit-learn==1.9.1
+
+# Notebooks
+matplotlib==3.11.2
+notebook==7.6.3
+ipykernel==7.4.0
+
+# Development
+pytest==9.2.0
+ruff==0.17.6
